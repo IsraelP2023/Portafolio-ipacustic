@@ -3,7 +3,6 @@ const toggleIcon = document.getElementById('toggle-icon');
 const toggletext = document.getElementById('toggle-text');
 
 const toggleColors = document.getElementById("toggle-colors");
-
 const rootStyles = document.documentElement.style;
 
 toggletheme.addEventListener('click', () => {
@@ -19,5 +18,5 @@ toggletheme.addEventListener('click', () => {
 });
 
 toggleColors.addEventListener('click', (e) => {
- rootStyles.setProperty("--primary-color", e.target.dataset.color);
+  rootStyles.setProperty("--primary-color", e.target.dataset.color);
 });

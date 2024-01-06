@@ -2,11 +2,9 @@
   --primary-color: hsl(214, 84%, 56%);
   --text-color: hsl(0, 0%, 31%);
   --bg-color: hsl(0, 0%, 90%);
-  --border-radius:0.4em;
+  --border-radius: 0.4em;
   --transition: 0.2s, background-color 0.2s ease-in-out;
-  
-}
-
+  --bg-card-color: hsl(0, 3%, 18%);
 
 /* Resto del CSS... */
 
@@ -22,6 +20,7 @@ text-decoration: none ;
 
 img{
   max-width:100%;
+  display:block; 
 }
 
 body {
@@ -29,6 +28,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: var(--transition);
+  font-family: Arial, Helvetica, sans-serif ;
 }
 
 body.dark {
@@ -110,6 +110,7 @@ transition: var(--transition);
 
 .main{
 display: grid;
+pading: 2em;
 
 }
 
@@ -122,9 +123,56 @@ display: grid;
 }
 }
 
-.card{
+.card {
+  padding: 1em;
+  background-color: var(--bg-card-color);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
 
-   padding: 1em;
-   background-color: var(--bg-card-color);
-   border-radius: var(--border-radius);
+.card__image-container {
+
+  min-width: 320px;
+  border-radius: var(--border-radius);
+  overflow:hidden;
+
+}
+
+.card__header {
+padding: 1em 0;
+
+
+}
+
+.card__title {
+
+  margin:0;
+  font-size: 1.2rem;
+}
+
+card__subtitle{
+
+  font-size:9rem;
+  opacity: 0.8;
+}
+
+.card__link {
+  margin-bottom: 0.5em;
+
+}
+
+.card__text {
+font-size: 0.9rem;
+line-height: 1.6;
+
+}
+
+.icon{
+  margin-right: 1em;
+}
+
+
+
+
+
 }
