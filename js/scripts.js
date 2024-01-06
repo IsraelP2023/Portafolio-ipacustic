@@ -4,6 +4,8 @@ const toggletext = document.getElementById('toggle-text');
 
 const toggleColors = document.getElementById("toggle-colors");
 
+const rootStyles = document.documentElement.style;
+
 toggletheme.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 
@@ -11,11 +13,11 @@ toggletheme.addEventListener('click', () => {
     toggleIcon.src = 'assets/icons/sun.svg';
     toggletext.textContent = 'Light Mode';
   } else {
-    toggleIcon.src = 'assets/icons/moon.svg';
-    toggletext.textContent = 'Dark Mode';
+    toggleIcon.src = "assets/icons/moon.svg";
+    toggletext.textContent = "Dark Mode";
   }
 });
 
 toggleColors.addEventListener('click', (e) => {
- console.log(e.target.dataset);
+ rootStyles.setProperty("--primary-color", e.target.dataset.color);
 });
